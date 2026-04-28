@@ -1,21 +1,80 @@
-# Next.js template
+# Agency System (Frontend)
 
-This is a Next.js template with shadcn/ui.
+A scalable **Frontend SaaS dashboard** built with **Next.js (App Router)** for managing marketing agencies workflows including clients, campaigns, tasks, reports, finance, and team management.
 
-## Adding components
+---
 
-To add components to your app, run the following command:
+## 🧠 Overview
 
-```bash
-npx shadcn@latest add button
-```
+This project is based on a **feature-driven architecture** designed for large-scale applications.
 
-This will place the ui components in the `components` directory.
+It provides a clean separation between:
+- Routing (Next.js App Router)
+- Business Logic (Features)
+- Reusable UI (Shared Components)
 
-## Using components
+---
 
-To use the components in your app, import them as follows:
+## 🏗️ Project Structure
+src/
+│
+├── app/ # Routing layer (Next.js App Router)
+│ ├── (dashboard)/ # Protected dashboard routes
+│ ├── auth/ # Authentication صفحات
+│ └── layout.tsx
+│
+├── features/ # Business logic لكل module
+│ ├── dashboard/
+│ ├── clients/
+│ ├── campaigns/
+│ ├── tasks/
+│ ├── content-approval/
+│ ├── reports/
+│ ├── finance/
+│ └── team/
+│
+├── shared/ # Reusable components & utilities
+│ ├── components/
+│ │ ├── ui/ # Design system
+│ │ ├── layout/ # Navbar, Sidebar
+│ │ └── charts/
+│ ├── hooks/
+│ ├── utils/
+│ └── types/
+│
+├── store/ # Global state (Zustand / Redux)
+├── lib/ # API clients
+└── config/ # App configuration
 
-```tsx
-import { Button } from "@/components/ui/button";
-```
+---
+
+## 🧩 Core Features
+
+- 📊 Dashboard (KPIs & Activity)
+- 👥 Clients Management (Profiles, Campaigns, Billing)
+- 📣 Campaigns Tracking (Goals, Budget, Performance)
+- ✅ Tasks System (Kanban, Assignments, Deadlines)
+- 📝 Content Approval Workflow (Uploads, Feedback, Versions)
+- 📈 Reports & Analytics
+- 💰 Finance (Invoices & Payments)
+- 👨‍💼 Team Management (Roles & Performance)
+
+---
+
+## ⚙️ Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **State Management:** Zustand (or Redux)
+- **Data Fetching:** Server Components + Fetch API
+- **UI Architecture:** Feature-Based Structure
+
+---
+
+## 💡 Author
+
+Muhammad Ahmad Ragab
+Frontend Developer (React / Next.js)
+
+---
