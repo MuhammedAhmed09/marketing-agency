@@ -1,5 +1,7 @@
+import GraphicDesign from "@/components/landing-page/graphic-desing";
 import Hero from "@/components/landing-page/hero";
 import Navbar from "@/components/landing-page/Navbar";
+import WebsiteDesign from "@/components/landing-page/website-design";
 import { Spotlight } from "@/components/ui/spotlight";
 
 export default function Page() {
@@ -8,6 +10,8 @@ export default function Page() {
       <Navbar />
       <Spotlight fill="white" className="h-screen"/>
       <Hero />
+      <WebsiteDesign />
+      <GraphicDesign />
     </div>
   )
 }

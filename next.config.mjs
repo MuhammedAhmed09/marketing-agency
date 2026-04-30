@@ -1,13 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
+  images: {
     remotePatterns: [
       {
-        protocol: 'https',
+        protocol: "https",
         hostname: "**.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "flowbite.s3.amazonaws.com",
       },
     ],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

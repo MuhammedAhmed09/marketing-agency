@@ -3,15 +3,14 @@
 import { AlignJustify, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { DropdownMenu } from "radix-ui";
 import { useState } from "react";
 import DropDownMenu from "../drop-down-menu";
 
 const sections = [
-    {id: 0, name: "Website Design"},
-    {id: 1, name: "Graphic Design"},
-    {id: 2, name: "Shopify Design"},
-    {id: 3, name: "Brands"}
+    {id: 0, name: "Website Design", section: "website"},
+    {id: 1, name: "Graphic Design", section: "graphic"},
+    {id: 2, name: "Shopify Design", section: "shopify"},
+    {id: 3, name: "Brands", section: "brands"}
 ]
 
 export default function Navbar() {
@@ -45,7 +44,17 @@ export default function Navbar() {
                 to bg-neutral-400 bg-opacity-50"
             >
                 {sections.map((section) => (
-                    <div className="hover:text-gray-50" key={section.id}>{section.name}</div>
+                    <Link 
+                        href={`#${section.section}`} 
+                        className="hover:text-gray-50 scroll-smooth" 
+                        key={section.id}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.querySelector(`#${section.section}`)?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                    >
+                        {section.name}
+                    </Link>
                 ))}    
             </div>
 
