@@ -20,10 +20,10 @@ const stores = [
 
 export default function ShopifyDesign() {
   return (
-    <div id="shopify">
+    <section id="shopify">
 
       {/* Hero */}
-      <section className="text-center py-24 px-6">
+      <main className="text-center py-24 px-6">
         <h1
           className="text-5xl md:text-7xl font-semibold
           bg-linear-to-b from-violet-500 via-violet-300 to-violet-100
@@ -35,7 +35,7 @@ export default function ShopifyDesign() {
           We create stunning Shopify stores that are designed to convert visitors into
           customers. Our team of experts will work with you to bring your vision to life.
         </p>
-      </section>
+      </main>
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-6 pb-20">
@@ -74,6 +74,6 @@ export default function ShopifyDesign() {
         ))}
       </div>
 
-    </div>
+    </section>
   )
 }

@@ -1,3 +1,4 @@
+import Brands from "@/components/landing-page/brands";
 import GraphicDesign from "@/components/landing-page/graphic-desing";
 import Hero from "@/components/landing-page/hero";
 import Navbar from "@/components/landing-page/Navbar";
@@ -14,6 +15,7 @@ export default function Page() {
       <WebsiteDesign />
       <GraphicDesign />
       <ShopifyDesign />
+      <Brands />
     </div>
   )
 }
