@@ -2,6 +2,7 @@ import Brands from "@/components/landing-page/brands";
 import GraphicDesign from "@/components/landing-page/graphic-desing";
 import Hero from "@/components/landing-page/hero";
 import Navbar from "@/components/landing-page/Navbar";
+import Services from "@/components/landing-page/services";
 import ShopifyDesign from "@/components/landing-page/shopify-design";
 import WebsiteDesign from "@/components/landing-page/website-design";
 import { Spotlight } from "@/components/ui/spotlight";
@@ -16,6 +17,7 @@ export default function Page() {
       <GraphicDesign />
       <ShopifyDesign />
       <Brands />
+      <Services />
     </div>
   )
 }

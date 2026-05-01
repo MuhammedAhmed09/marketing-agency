@@ -11,7 +11,7 @@ const logos = [
 
 export default function Brands() {
     return (
-        <section id="brands">
+        <section id="brands" className="p-4">
             <main className="text-center py-24 px-6">
                 <h1
                     className="text-5xl md:text-7xl font-semibold
