@@ -1,4 +1,5 @@
 import Brands from "@/components/landing-page/brands";
+import FAQ from "@/components/landing-page/faq";
 import GraphicDesign from "@/components/landing-page/graphic-desing";
 import Hero from "@/components/landing-page/hero";
 import Navbar from "@/components/landing-page/Navbar";
@@ -18,6 +19,7 @@ export default function Page() {
       <ShopifyDesign />
       <Brands />
       <Services />
+      <FAQ />
     </div>
   )
 }

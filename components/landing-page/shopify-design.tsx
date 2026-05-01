@@ -20,60 +20,60 @@ const stores = [
 
 export default function ShopifyDesign() {
   return (
-    <section id="shopify">
-
-      {/* Hero */}
-      <main className="text-center py-24 px-6">
-        <h1
-          className="text-5xl md:text-7xl font-semibold
-          bg-linear-to-b from-violet-500 via-violet-300 to-violet-100
-          bg-clip-text text-transparent leading-tight mb-6"
-        >
-          Shopify Stores
-        </h1>
-        <p className="mx-auto max-w-lg text-base font-light text-neutral-400 leading-relaxed">
-          We create stunning Shopify stores that are designed to convert visitors into
-          customers. Our team of experts will work with you to bring your vision to life.
-        </p>
-      </main>
-
-      {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-6 pb-20">
-        {stores.map((store, index) => (
-          <div
-            key={index}
-            className="group bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden
-            hover:-translate-y-1.5 hover:border-violet-400/60 transition-all duration-300"
+    <section id="shopify" className="p-4 md:p-8 mt-10">
+      <div className="py-10 md:p-20 rounded-3xl w-full bg-accent-foreground text-accent dark:bg-accent dark:text-accent-foreground">
+        {/* Hero */}
+        <main className="text-center py-24 px-6">
+          <h1
+            className="text-5xl md:text-7xl font-semibold
+            bg-linear-to-b from-violet-500 via-violet-300 to-violet-100
+            bg-clip-text text-transparent leading-tight mb-6"
           >
-            {/* Image */}
-            <div className="relative h-48 w-full overflow-hidden">
-              <Image
-                src={store.image}
-                fill
-                alt={`Store ${index + 1}`}
-                className="object-cover"
-              />
-            </div>
+            Shopify Stores
+          </h1>
+          <p className="mx-auto max-w-lg text-base font-light text-neutral-400 leading-relaxed">
+            We create stunning Shopify stores that are designed to convert visitors into
+            customers. Our team of experts will work with you to bring your vision to life.
+          </p>
+        </main>
 
-            {/* Content */}
-            <div className="p-5">
-              <span className="text-3xl text-violet-400 leading-none block mb-2">
-                &#34;
-              </span>
-              <p className="italic text-sm text-neutral-300 leading-relaxed mb-4">
-                {store.quote}
-              </p>
-              <div className="border-t border-neutral-800 pt-3 flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-violet-400" />
-                <span className="text-xs font-medium tracking-widest uppercase text-neutral-500">
-                  {store.author}
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-6 pb-20">
+          {stores.map((store, index) => (
+            <div
+              key={index}
+              className="group bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden
+              hover:-translate-y-1.5 hover:border-violet-400/60 transition-all duration-300"
+            >
+              {/* Image */}
+              <div className="relative h-48 w-full overflow-hidden">
+                <Image
+                  src={store.image}
+                  fill
+                  alt={`Store ${index + 1}`}
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-5">
+                <span className="text-3xl text-violet-400 leading-none block mb-2">
+                  &#34;
                 </span>
+                <p className="italic text-sm text-neutral-300 leading-relaxed mb-4">
+                  {store.quote}
+                </p>
+                <div className="border-t border-neutral-800 pt-3 flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-violet-400" />
+                  <span className="text-xs font-medium tracking-widest uppercase text-neutral-500">
+                    {store.author}
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-
     </section>
   )
 }
