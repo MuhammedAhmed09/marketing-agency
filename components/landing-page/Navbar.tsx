@@ -46,7 +46,7 @@ export default function Navbar() {
                 {sections.map((section) => (
                     <Link 
                         href={`#${section.section}`} 
-                        className="hover:text-gray-50 scroll-smooth" 
+                        className="hover:text-gray-50 scroll-smooth text-xl md:text-2xl font-medium" 
                         key={section.id}
                         onClick={(e) => {
                             e.preventDefault();
@@ -56,6 +56,13 @@ export default function Navbar() {
                         {section.name}
                     </Link>
                 ))}    
+
+                <Link
+                    href={"/pricing"}
+                    className="hover:text-gray-50 scroll-smooth text-xl md:text-2xl font-medium"
+                >
+                    Pricing
+                </Link>
             </div>
 
             <div className="flex md:hidden">

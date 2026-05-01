@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -14,19 +14,19 @@ export default function NotFound() {
 
         <div className="flex flex-col gap-2">
           <h1 className="text-xl font-medium">
-            الصفحة دي اتشالت أو مش موجودة
+            The page you are looking for does not exist.
           </h1>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            يمكن الرابط اتكتب غلط أو الصفحة اتنقلت لمكان تاني.
+            It might have been removed, renamed, or did not exist in the first place.
           </p>
         </div>
 
         <div className="flex gap-3 flex-wrap justify-center mt-2">
           <Link
             href="/"
-            className="rounded-full border border-border px-6 py-2.5 text-sm font-medium bg-primary text-accent-foreground hover:bg-primary/90 transition-colors"
+            className="rounded-full border border-border px-6 py-2.5 font-medium bg-foreground text-background hover:bg-primary/90 transition-colors"
           >
-            Home
+            Back to Home
           </Link>
         </div>
 

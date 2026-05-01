@@ -88,7 +88,7 @@ export default function HeroSlider() {
   // تشغيل animation
   const startAnimation = () => {
     controlsRef.current = animate(x, [x.get(), -width], {
-      ease: "linear",
+      linear: "ease",
       duration: 20,
       repeat: Infinity
     });
@@ -110,56 +110,60 @@ export default function HeroSlider() {
 
   return (
     <div className="py-10">
-        <main
-        className="overflow-hidden w-full"
+      <main
+        className={`overflow-hidden w-full ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        >
+      >
         <motion.div
-            ref={containerRef}
-            style={{ x }}
-            drag="x"
-            dragConstraints={{ left: -width, right: 0 }}
-            onDragStart={() => {
-              setIsDragging(true);
-              controlsRef.current?.stop();
-            }}
-            onDragEnd={() => {
-              setIsDragging(false);
-              startAnimation();
-            }}
-            className={`flex gap-4 px-4 ${
-            isDragging ? "cursor-grabbing" : "cursor-grab"
-          }`}
-        >
-            {duplicated.map((item, index) => (
-            <div
-                key={index}
-                className="min-w-[280px] md:min-w-[320px] lg:min-w-[360px]"
+          ref={containerRef}
+          style={{ x }}
+          drag="x"
+          dragConstraints={{ left: -width, right: 0 }}
+          onDragStart={() => {
+            setIsDragging(true);
+            controlsRef.current?.stop();
+          }}
+          onDragEnd={() => {
+            setIsDragging(false);
+            startAnimation();
+          }}
+          className={`flex gap-4 px-4 ${
+          isDragging ? "cursor-grabbing" : "cursor-grab"
+        }`}
+      >
+        {duplicated.map((item, index) => (
+          <div
+            key={index}
+            className="min-w-[280px] md:min-w-[320px] lg:min-w-[360px]"
+          >
+            <Link 
+              href={item.link} 
+              className="block relative group"
+              style={{ cursor: "inherit" }}
+              draggable={false}  
             >
-                <Link href={item.link} className="block relative group">
-                
-                <div className="overflow-hidden rounded-2xl">
-                    <Image
+              <div className="overflow-hidden rounded-2xl" draggable={false}>
+                  <Image
                     src={item.image}
                     alt={item.title}
                     width={500}
                     height={300}
+                    draggable={false}
                     className="w-full h-[220px] object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                </div>
+                  />
+              </div>
 
-                <div className="absolute inset-0 bg-black/40 rounded-2xl flex items-end p-4">
-                    <h3 className="text-white text-sm md:text-base font-semibold">
-                    {item.title}
-                    </h3>
-                </div>
-
-                </Link>
+              <div className="absolute inset-0 bg-black/40 rounded-2xl flex items-end p-4">
+                  <h3 className="text-white text-sm md:text-base font-semibold">
+                  {item.title}
+                  </h3>
+              </div>
+              </Link>
             </div>
-            ))}
+          ))}
         </motion.div>
-        </main>
+      </main>
     </div>
   );
 }
