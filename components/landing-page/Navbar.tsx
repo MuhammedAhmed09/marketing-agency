@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import DropDownMenu from "../drop-down-menu";
+import { useRouter } from "next/navigation";
 
 const sections = [
     {id: 0, name: "Website Design", section: "website"},
@@ -16,12 +17,24 @@ const sections = [
 export default function Navbar() {
     const [isDropDownVisible, setIsDropDownVisible] = useState(false);
 
+    const router = useRouter();
+
     const toggleDropDown = () => {
         setIsDropDownVisible(!isDropDownVisible);
     }
 
     const closeDropDown = () => {
         setIsDropDownVisible(false);
+    }
+
+    const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, section: string) => {
+        e.preventDefault();
+
+        if(window.location.pathname !== "/") {
+            router.push(`/#${section}`);
+            return;
+        }
+        document.querySelector(`#${section}`)?.scrollIntoView({ behavior: "smooth" });
     }
 
     return (
@@ -45,13 +58,10 @@ export default function Navbar() {
             >
                 {sections.map((section) => (
                     <Link 
-                        href={`#${section.section}`} 
+                        href={`/#${section.section}`} 
                         className="hover:text-gray-50 scroll-smooth text-xl md:text-2xl font-medium" 
                         key={section.id}
-                        onClick={(e) => {
-                            e.preventDefault();
-                            document.querySelector(`#${section.section}`)?.scrollIntoView({ behavior: "smooth" });
-                        }}
+                        onClick={(e) => handleSectionClick(e, section.section)}
                     >
                         {section.name}
                     </Link>
