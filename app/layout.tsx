@@ -29,13 +29,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", spaceGrotesk.variable)}
-    >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+    <html lang="en" suppressHydrationWarning className={cn("antialiased", fontMono.variable, "font-sans", spaceGrotesk.variable)}>
+      <body suppressHydrationWarning className="bg-foreground dark:bg-background">
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

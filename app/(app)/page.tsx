@@ -9,7 +9,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 
 export default function Page() {
   return (
-    <div className="bg-foreground dark:bg-background">
+    <div>
       <Spotlight fill="white" className="h-screen"/>
       <Hero />
       <WebsiteDesign />

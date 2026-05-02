@@ -1,18 +1,16 @@
 import Navbar from "@/components/landing-page/Navbar"
 
-export default function appLayout({
+export default function AppLayout({
   children,
 }: {
-    children: React.ReactNode
+  children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
-        <Navbar />
-        <main>
-          {children}
-        </main>
-      </body>
-    </html>
+    <>
+      <Navbar />
+      <main>
+        {children}
+      </main>
+    </>
   )
 }

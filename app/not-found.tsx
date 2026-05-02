@@ -21,14 +21,12 @@ export default function NotFound() {
           </p>
         </div>
 
-        <div className="flex gap-3 flex-wrap justify-center mt-2">
-          <Link
-            href="/"
-            className="rounded-full border border-border px-6 py-2.5 font-medium bg-foreground text-background hover:bg-primary/90 transition-colors"
-          >
-            Back to Home
-          </Link>
-        </div>
+        <Link
+          href="/"
+          className="inline-flex items-center cursor-pointer gap-2 text-sm font-medium text-background bg-foreground dark:text-foreground dark:bg-background hover:text-primary/80 transition-colors"
+        >
+          Go back home
+        </Link>
 
       </div>
     </div>

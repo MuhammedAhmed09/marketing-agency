@@ -59,7 +59,7 @@ export default function Navbar() {
                 {sections.map((section) => (
                     <Link 
                         href={`/#${section.section}`} 
-                        className="hover:text-gray-50 scroll-smooth text-xl md:text-2xl font-medium" 
+                        className="hover:text-gray-50 scroll-smooth text-xl font-medium" 
                         key={section.id}
                         onClick={(e) => handleSectionClick(e, section.section)}
                     >
@@ -69,7 +69,7 @@ export default function Navbar() {
 
                 <Link
                     href={"/pricing"}
-                    className="hover:text-gray-50 scroll-smooth text-xl md:text-2xl font-medium"
+                    className="hover:text-gray-50 scroll-smooth text-xl font-medium"
                 >
                     Pricing
                 </Link>
