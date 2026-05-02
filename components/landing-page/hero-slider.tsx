@@ -87,10 +87,11 @@ export default function HeroSlider() {
 
   // تشغيل animation
   const startAnimation = () => {
-    controlsRef.current = animate(x, [x.get(), -width], {
-      linear: "ease",
+    controlsRef.current = animate(x, -width, {
+      ease: "linear",
       duration: 20,
-      repeat: Infinity
+      repeat: Infinity,
+      repeatType: "loop",
     });
   };
 
