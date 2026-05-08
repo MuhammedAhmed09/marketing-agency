@@ -3,7 +3,6 @@ import { Link } from "lucide-react";
 export default function NotFound() {
   return (
     <div
-      dir="rtl"
       className="min-h-screen flex items-center justify-center px-6"
     >
       <div className="text-center flex flex-col items-center gap-5 max-w-md">

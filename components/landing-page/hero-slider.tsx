@@ -78,6 +78,8 @@ export default function HeroSlider() {
 
   const controlsRef = useRef<AnimationPlaybackControls | null>(null);
 
+  const isDragged = useRef(false);
+
   // حساب العرض
   useEffect(() => {
     if (containerRef.current) {
@@ -123,6 +125,7 @@ export default function HeroSlider() {
           dragConstraints={{ left: -width, right: 0 }}
           onDragStart={() => {
             setIsDragging(true);
+            isDragged.current = true;
             controlsRef.current?.stop();
           }}
           onDragEnd={() => {
@@ -141,8 +144,10 @@ export default function HeroSlider() {
             <Link 
               href={item.link} 
               className="block relative group"
-              style={{ cursor: "inherit" }}
-              draggable={false}  
+              draggable={false}
+              onClick={(e) => {
+                if (isDragged.current) e.preventDefault(); // 👈 block nav after drag
+              }}
             >
               <div className="overflow-hidden rounded-2xl" draggable={false}>
                   <Image
