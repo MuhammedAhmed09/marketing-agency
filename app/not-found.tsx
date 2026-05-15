@@ -19,14 +19,9 @@ export default function NotFound() {
             It might have been removed, renamed, or did not exist in the first place.
           </p>
         </div>
-
-        <Link
-          href="/"
-          className="inline-flex items-center cursor-pointer gap-2 text-sm font-medium text-background bg-foreground dark:text-foreground dark:bg-background hover:text-primary/80 transition-colors"
-        >
+        <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-muted-foreground/80">
           Go back home
         </Link>
-
       </div>
     </div>
   )

@@ -6,10 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getServiceBySlug, services } from "@/data/servicesData";
 
-export async function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
-}
-
 export async function generateMetadata({
   params,
 }: {
@@ -19,7 +15,7 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug);
   if (!service) return {};
   return {
-    title: `${service.title} — Agency`,
+    title: `${service.title} | Services`,
     description: service.description,
   };
 }
@@ -53,10 +49,10 @@ export default async function ServicePage({
       <section className="relative h-screen min-h-[600px] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image src={service!.image} alt={service!.title} fill priority className="object-cover object-center" style={{ filter: "brightness(0.25)" }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-background via-background/30 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-background/50 via-transparent to-transparent" />
         </div>
-        <div className="absolute left-12 bottom-0 w-px h-32 bg-gradient-to-b from-primary/40 to-transparent" />
+        <div className="absolute left-12 bottom-0 w-px h-32 bg-linear-to-b from-primary/40 to-transparent" />
         <div className="relative z-10 mx-auto max-w-6xl w-full px-6 pb-20 md:pb-28">
           <p className="text-xs tracking-[0.2em] uppercase text-primary/70 font-medium mb-4">Our Services</p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight mb-5">{service!.title}</h1>
