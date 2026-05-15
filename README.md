@@ -78,3 +78,29 @@ Muhammad Ahmad Ragab
 Frontend Developer (React / Next.js)
 
 ---
+
+
+<!-- 
+
+Phase 1:
+    landing page  +
+    auth +
+    lead form +
+    admin dashboard 
+    client dashboard basic
+
+
+Phase 2:
+    chat
+    reports
+    file uploads
+    project tracking
+
+
+Phase 3:
+    payments
+    notifications
+    analytics
+    automation 
+
+-->

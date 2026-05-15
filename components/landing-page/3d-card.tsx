@@ -41,7 +41,7 @@ export function ThreeDCardDemo() {
           <CardItem
             translateZ={20}
             as="a"
-            href="https://fashion-store-amber.vercel.app/"
+            href="https://luna-peach-theta.vercel.app/"
             target="_blank"
             className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
           >
@@ -52,7 +52,7 @@ export function ThreeDCardDemo() {
           <CardItem
             translateZ={20}
             as="a"
-            href="https://fashion-store-amber.vercel.app/"
+            href="https://luna-peach-theta.vercel.app/"
             target="_blank"
             className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
           >
