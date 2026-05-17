@@ -83,9 +83,9 @@ Frontend Developer (React / Next.js)
 <!-- 
 
 Phase 1:
-    landing page  +
-    auth +
-    lead form +
+    landing page  +done
+    auth 
+    lead form +done
     admin dashboard 
     client dashboard basic
 
