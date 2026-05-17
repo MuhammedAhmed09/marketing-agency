@@ -108,14 +108,8 @@ export const salesSidebar: NavItem[] = [
 
   {
     title: "Leads",
+    url: "/sales/leads",
     icon: Users,
-    items: [
-      { title: "All Leads", url: "/sales/leads" },
-      { title: "New Leads", url: "/sales/leads/new" },
-      { title: "Pipeline", url: "/sales/leads/pipeline" },
-      { title: "Won Deals", url: "/sales/leads/won" },
-      { title: "Lost Deals", url: "/sales/leads/lost" },
-    ],
   },
 
   {

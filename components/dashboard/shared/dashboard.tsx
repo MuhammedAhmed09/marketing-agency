@@ -1,3 +1,5 @@
+"use client"
+
 import { AppSidebar } from "@/components/dashboard/shared/app-sidebar";
 import {
     Breadcrumb,
@@ -17,13 +19,14 @@ import {
 
   type Role = "admin" | "sales" | "developer" | "client";
 
-    interface DashboardProps {
+  interface DashboardProps {
     role: Role;
     href: string;
     breadcrumb: string;
-    }
+    children?: React.ReactNode;
+  }
   
-  export default function Dashboard({ role, href, breadcrumb, }: DashboardProps) {
+  export default function Dashboard({ role, href, breadcrumb, children }: DashboardProps) {
     return (
       <SidebarProvider>
         <TooltipProvider delayDuration={0}>
@@ -52,12 +55,7 @@ import {
               </div>
             </header>
             <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-              <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-                <div className="aspect-video rounded-xl bg-muted/50" />
-                <div className="aspect-video rounded-xl bg-muted/50" />
-                <div className="aspect-video rounded-xl bg-muted/50" />
-              </div>
-              <div className="min-h-screen flex-1 rounded-xl bg-muted/50 md:min-h-min" />
+              {children}
             </div>
           </SidebarInset>
         </TooltipProvider>
