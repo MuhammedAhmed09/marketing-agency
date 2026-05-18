@@ -3,15 +3,15 @@ import { Metadata } from "next";
 
 export const metadata:Metadata = {
   title: {
-    template: "%s | Admin | ViralOps Marketing",
-    default: "Admin | ViralOps Marketing",
+    template: "%s | Client | ViralOps Marketing",
+    default: "Client | ViralOps Marketing",
   },
 };
 
 export default function Page({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Dashboard role="admin" href="/admin" breadcrumb="Admin Panel" >
+      <Dashboard role="client" href="/client" breadcrumb="Client Panel" >
         {children}
       </Dashboard>
     </>

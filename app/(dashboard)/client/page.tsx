@@ -1,7 +1,18 @@
-import Dashboard from "@/components/dashboard/shared/dashboard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Developer",
+};
 
 export default function Page() {
-  return (
-    <Dashboard role="client" href="/client" breadcrumb="Client Dashboard" />
-  )
+    return (
+        <>
+            <div className="grid auto-rows-min gap-4 md:grid-cols-3">
+                <div className="aspect-video rounded-xl bg-muted/50" />
+                <div className="aspect-video rounded-xl bg-muted/50" />
+                <div className="aspect-video rounded-xl bg-muted/50" />
+            </div>
+            <div className="min-h-screen flex-1 rounded-xl bg-muted/50 md:min-h-min" />
+        </>
+    )
 }
