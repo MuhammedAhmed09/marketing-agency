@@ -25,7 +25,7 @@ import {
     breadcrumb: string;
     children?: React.ReactNode;
   }
-  
+
   export default function Dashboard({ role, href, breadcrumb, children }: DashboardProps) {
     return (
       <SidebarProvider>
